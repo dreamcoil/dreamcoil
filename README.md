@@ -1,6 +1,8 @@
 # Dreamcoil
-## PhP framework for smooth people
-### Creating a new view
+
+- PhP framework for smooth people
+
+## Quickstart
 ```php
 if(ROUTE == '/'){
 

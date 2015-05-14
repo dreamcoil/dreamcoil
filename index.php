@@ -6,12 +6,13 @@ $route = '/'.$route;
 
 define('ROUTE',$route);
 
-define('VIEW404', TRUE);
+$DREAMCOIL['view404'] = TRUE;
 
 $varRoute = explode('/', ROUTE);
 
 function getView($view, $record = TRUE)
 {
+	global $DREAMCOIL;
 
 	$view = str_replace('.','/',$view);
 
@@ -71,7 +72,7 @@ function getView($view, $record = TRUE)
 
 	}
 
-	if($record AND VIEW404) define('VIEW404',FALSE);
+	if($record AND $DREAMCOIL['view404']) $DREAMCOIL['view404'] = FALSE;
 
 	return $returnView;
 
@@ -80,7 +81,7 @@ function getView($view, $record = TRUE)
 function view404($view)
 {
 
-	if(VIEW404) return getView($view);
+	if($DREAMCOIL['view404']) return getView($view);
 
 }
 
