@@ -3,6 +3,6 @@
 
 if(ROUTE == '/'){
 
-	include(getView('hello'));
+	include(getView('welcome.hello'));
 
 }
