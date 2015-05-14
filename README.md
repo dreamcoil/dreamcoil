@@ -1,7 +1,5 @@
 # Dreamcoil
-
-- PhP framework for smooth people
-
+###PhP framework for smooth people
 ## Quickstart
 ```php
 if(ROUTE == '/'){

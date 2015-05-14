@@ -85,6 +85,45 @@ function view404($view)
 
 }
 
+
+function secret($length, $character = 'Messner')
+{
+
+    if($character == 'Messner')
+    {
+
+    	$characters = '1234567890qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM';
+
+    }
+    else if(is_string($character))
+    {
+
+    	$characters = $character;
+
+    }
+    else
+    {
+
+    	echo 'This is not a valid string: secret("'.$length.'", "'.$character.'");';
+
+    	die();
+
+    }
+
+    $randstring = '';
+
+    for ($i = 0; $i < $length; $i++) 
+    {
+
+    	$num = rand(3, strlen($characters) - 6);
+
+    	$randstring = $randstring.$characters[$num];
+
+    }
+
+    return $randstring;
+}
+
 unset($cache);
 
 include('views/route.php');
