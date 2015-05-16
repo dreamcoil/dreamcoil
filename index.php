@@ -1,15 +1,33 @@
 <?php
 
+//DREAMCOIL WEB FRAMEWORK DEVELOPED BY FLORIAN THEIMER
+//
+//The MIT License (MIT)
+//
+//ENJOY USING IT!
+
+
+//Get the requested URI
+//ROUTE and $varRoute
+//
 $route = str_replace(str_replace('index.php', '', $_SERVER['SCRIPT_NAME']), '', $_SERVER['REQUEST_URI']);
 
 $route = '/'.$route;
 
 define('ROUTE',$route);
 
-$DREAMCOIL['view404'] = TRUE;
-
 $varRoute = explode('/', ROUTE);
+//
 
+//Setting some variables
+//
+$DREAMCOIL['view404'] = TRUE;
+//
+
+//The getView function
+//$view string 
+//$record boolean
+//
 function getView($view, $record = TRUE)
 {
 	global $DREAMCOIL;
@@ -77,15 +95,30 @@ function getView($view, $record = TRUE)
 	return $returnView;
 
 }
+//
 
+//Returns the 404 error page path
+//$view string
+//
 function view404($view)
 {
 
 	if($DREAMCOIL['view404']) return getView($view);
 
 }
+//
 
+//------------------------------------------------------------
+//
+//Codebowl
+//
+//------------------------------------------------------------
+//Here are some functions from the Codebowl
 
+//Generates a random string
+//$length string
+//$charachter string
+//
 function secret($length, $character = 'Messner')
 {
 
@@ -123,7 +156,29 @@ function secret($length, $character = 'Messner')
 
     return $randstring;
 }
+//
 
+//Cleares the cache
 unset($cache);
 
+//Auto load the all files in the _app directory
+//
+$directory = 'views/_app/';
+
+$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
+
+$it->rewind();
+
+while($it->valid()) {
+
+    if (!$it->isDot()) {
+
+    	include($directory.str_replace("\\", "/", $it->getSubPathName()));
+    }
+
+    $it->next();
+}
+//
+
+//Let's get into the views directory!
 include('views/route.php');
