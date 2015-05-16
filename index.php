@@ -24,7 +24,6 @@ $varRoute = explode('/', ROUTE);
 $DREAMCOIL['view404'] = TRUE;
 //
 
-
 //The getView function
 //$view string 
 //$record boolean
@@ -161,6 +160,25 @@ function secret($length, $character = 'Messner')
 
 //Cleares the cache
 unset($cache);
+
+//Auto load the all files in the _app directory
+//
+$directory = 'views/_app/';
+
+$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
+
+$it->rewind();
+
+while($it->valid()) {
+
+    if (!$it->isDot()) {
+
+    	include($directory.str_replace("\\", "/", $it->getSubPathName()));
+    }
+
+    $it->next();
+}
+//
 
 //Let's get into the views directory!
 include('views/route.php');

@@ -1,5 +1,5 @@
 # Dreamcoil
-###PhP framework for smooth people
+### PhP framework for smooth people
 ## Quickstart
 
 1.  [Get it!](https://github.com/xolf/dreamcoil/archive/master.zip)
