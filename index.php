@@ -2,7 +2,7 @@
 
 //DREAMCOIL WEB FRAMEWORK DEVELOPED BY FLORIAN THEIMER
 //
-//The MIT License (MIT)
+//MIT License (MIT)
 //
 //ENJOY USING IT!
 
@@ -25,7 +25,7 @@ $DREAMCOIL['view404'] = TRUE;
 //
 
 //The getView function
-//$view string 
+//$view string
 //$record boolean
 //
 function getView($view, $record = TRUE)
@@ -145,7 +145,7 @@ function secret($length, $character = 'Messner')
 
     $randstring = '';
 
-    for ($i = 0; $i < $length; $i++) 
+    for ($i = 0; $i < $length; $i++)
     {
 
     	$num = rand(3, strlen($characters) - 6);
