@@ -1,0 +1,7 @@
+{
+    "name": "xolf/dreamcoil",
+    "description": "PhP web framework for the smooth people on the big blue planet",
+    "require": {
+        "php": ">=5.0"
+    }
+}
