@@ -9,6 +9,8 @@
 
 Or install it with Composer. "xolf/dreamcoil".
 
+After downloading these files remove the README.md.
+
 ```php
 if(ROUTE == '/'){
 
