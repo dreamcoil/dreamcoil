@@ -7,6 +7,8 @@
 3.  Start using Dreamcoil for your projects
 4.  Read the [wiki](https://github.com/xolf/dreamcoil/wiki)
 
+Or install it with Composer. "xolf/dreamcoil".
+
 ```php
 if(ROUTE == '/'){
 
