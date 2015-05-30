@@ -7,7 +7,7 @@
     "support": {
         "issues": "https://github.com/xolf/dreamcoil/issues",
         "source": "https://github.com/xolf/dreamcoil"
-    },s
+    },
     "license": "MIT",
     "require": {
         "php": ">=5.0"
