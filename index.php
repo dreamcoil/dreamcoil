@@ -34,12 +34,12 @@ function getView($view, $record = TRUE)
 
 	$view = str_replace('.','/',$view);
 
-	$returnView = 'views/'.$view.'.php';
+	$returnView = 'dreamcoil/views/'.$view.'.php';
 	if(!file_exists($returnView))
 	{
 
 
-		$directory = 'views/';
+		$directory = 'dreamcoil/views/';
 
 		$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
 
@@ -183,7 +183,7 @@ unset($cache);
 
 //Auto load the all files in the _app directory
 //
-$directory = 'views/_app/';
+$directory = 'dreamcoil/_app/';
 
 $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
 
@@ -201,4 +201,4 @@ while($it->valid()) {
 //
 
 //Let's get into the views directory!
-include('views/route.php');
+include('dreamcoil/views/route.php');
