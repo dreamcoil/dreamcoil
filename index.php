@@ -108,6 +108,26 @@ function view404($view)
 }
 //
 
+//Adds the line to the file
+//$file string
+function addToFile($file)
+{
+
+	if(file_exists($file))
+	{
+
+
+
+	}
+	else
+	{
+
+		echo 'Can not find the file: addToFile("'.$file.'")';
+
+	}
+
+}
+
 //------------------------------------------------------------
 //
 //Codebowl
