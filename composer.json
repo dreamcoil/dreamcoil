@@ -1,11 +1,21 @@
 {
     "name": "xolf/dreamcoil",
-    "type": "framework",
-    "description": "PhP web framework for the smooth people on the big blue planet",
-    "keywords": ["mvc","framework"],
-    "homepage": "https://github.com/xolf/dreamcoil",
+    "type": "project",
+    "description": "PhP web micro-framework for the smooth people on the big blue planet",
+    "keywords": ["router","microframework","dreamcoil"],
+    "homepage": "github.com/xolf/dreamcoil",
+    "support": {
+        "issues": "https://github.com/xolf/dreamcoil/issues",
+        "source": "https://github.com/xolf/dreamcoil"
+    },
     "license": "MIT",
     "require": {
         "php": ">=5.0"
-    }
+    },
+    "authors": [
+        {
+            "name": "xolf",
+            "email": "webmaster@xolf.info"
+        }
+    ],
 }
