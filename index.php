@@ -21,112 +21,97 @@ $varRoute = explode('/', ROUTE);
 
 //Setting some variables
 //
+$DREAMCOIL[] = '';
+
 $DREAMCOIL['view404'] = TRUE;
 //
 
-//The getView function
-//$view string
-//$record boolean
-//
+/**
+ * @param string $view
+ * @param bool $record
+ * @return string
+ */
 function getView($view, $record = TRUE)
 {
-	global $DREAMCOIL;
+    global $DREAMCOIL;
 
-	$view = str_replace('.','/',$view);
+    $view = str_replace('.','/',$view);
 
-	$returnView = 'dreamcoil/views/'.$view.'.php';
-	if(!file_exists($returnView))
-	{
-
-
-		$directory = 'dreamcoil/views/';
-
-		$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
-
-		while($it->valid())
-		{
-
-		    if (!$it->isDot())
-			{
-
-				$cache['SelectView'] = strrev($view);
-
-				$cache['SelectView'] = explode("/", $cache['SelectView'])[0];
-
-				$cache['SelectView'] = strrev($cache['SelectView']);
+    $returnView = 'dreamcoil/views/'.$view.'.php';
+    if(!file_exists($returnView))
+    {
 
 
-		        $cache['ReturnView'] = explode(".", $it->key());
+        $directory = 'dreamcoil/views/';
 
-				$cache['ReturnView'] = strrev($cache['ReturnView'][0]);
+        $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
 
-				$cache['ReturnView'] = explode("\\", $cache['ReturnView'])[0];
+        while($it->valid())
+        {
 
-				$cache['ReturnView'] = strrev($cache['ReturnView']);
+            if (!$it->isDot())
+            {
 
+                $cache['SelectView'] = strrev($view);
 
-				if($cache['ReturnView'] == $cache['SelectView'])
-				{
+                $cache['SelectView'] = explode("/", $cache['SelectView'])[0];
 
-					$returnView = $it->key();
-
-				}
-		    }
-
-		    $it->next();
-
-		}
+                $cache['SelectView'] = strrev($cache['SelectView']);
 
 
+                $cache['ReturnView'] = explode(".", $it->key());
 
-		if(!isset($returnView))
-		{
+                $cache['ReturnView'] = strrev($cache['ReturnView'][0]);
 
-			echo 'Can not find a file matching these arguments: getView("'.$view.'")';
+                $cache['ReturnView'] = explode("\\", $cache['ReturnView'])[0];
 
-			die();
+                $cache['ReturnView'] = strrev($cache['ReturnView']);
 
-		}
 
-	}
+                if($cache['ReturnView'] == $cache['SelectView'])
+                {
 
-	if($record AND $DREAMCOIL['view404']) $DREAMCOIL['view404'] = FALSE;
+                    $returnView = $it->key();
 
-	return $returnView;
+                }
+            }
+
+            $it->next();
+
+        }
+
+
+
+        if(!isset($returnView))
+        {
+
+            die('Can not find a file matching these arguments: getView("'.$view.'")');
+
+        }
+
+    }
+
+    if($record AND $DREAMCOIL['view404']) $DREAMCOIL['view404'] = FALSE;
+
+    return $returnView;
 
 }
 //
 
-//Returns the 404 error page path
-//$view string
-//
+/**
+ * @param string $view
+ * @return string|bool
+ */
 function view404($view)
 {
+    global $DREAMCOIL;
 
-	if($DREAMCOIL['view404']) return getView($view);
+    if($DREAMCOIL['view404']) return getView($view, FALSE);
+
+    return FALSE;
 
 }
 //
-
-//Adds the line to the file
-//$file string
-function addToFile($file)
-{
-
-	if(file_exists($file))
-	{
-
-
-
-	}
-	else
-	{
-
-		echo 'Can not find the file: addToFile("'.$file.'")';
-
-	}
-
-}
 
 //------------------------------------------------------------
 //
@@ -135,31 +120,30 @@ function addToFile($file)
 //------------------------------------------------------------
 //Here are some functions from the Codebowl
 
-//Generates a random string
-//$length string
-//$charachter string
-//
+/**
+ * @param int $length
+ * @param string $character
+ * @return string
+ */
 function secret($length, $character = 'Messner')
 {
 
     if($character == 'Messner')
     {
 
-    	$characters = '1234567890qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM';
+        $characters = '1234567890qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM';
 
     }
     else if(is_string($character))
     {
 
-    	$characters = $character;
+        $characters = $character;
 
     }
     else
     {
 
-    	echo 'This is not a valid string: secret("'.$length.'", "'.$character.'");';
-
-    	die();
+        die('This is not a valid string: secret("'.$length.'", "'.$character.'");');
 
     }
 
@@ -168,22 +152,107 @@ function secret($length, $character = 'Messner')
     for ($i = 0; $i < $length; $i++)
     {
 
-    	$num = rand(3, strlen($characters) - 6);
+        $num = rand(3, strlen($characters) - 6);
 
-    	$randstring = $randstring.$characters[$num];
+        $randstring = $randstring.$characters[$num];
 
     }
 
     return $randstring;
+}
+
+//Adds the line to the file
+//$file string
+function addToFile($file)
+{
+
+    if(file_exists($file))
+    {
+
+
+
+    }
+    else
+    {
+
+        die('Can not find the file: addToFile("'.$file.'")');
+
+    }
+
+}
+
+
+/**
+ * @param array|string $var
+ * @return array|string
+ */
+function htmlEscape($var)
+{
+
+    if(is_array($var))
+    {
+
+        foreach ($var as $key => $value)
+        {
+
+            $var[$key] = htmlspecialchars($value, ENT_QUOTES);
+
+        }
+
+    }
+    else
+    {
+
+        $var = htmlspecialchars($var, ENT_QUOTES);
+
+    }
+
+    return $var;
+
+}
+
+/**
+ * @param string $placeholder
+ * @param string $replace
+ */
+function placeholderReplace($placeholder, $replace)
+{
+
+    if(is_array($replace))
+    {
+
+        foreach ($replace as $key => $value)
+        {
+
+            $placeholder = str_replace('%'.$key.'%', $value, $placeholder);
+
+        }
+
+    }
+    else
+    {
+
+        die('The replacer isn not an array: placeholderReplace('.$placeholder.', '.$replace.');');
+
+    }
+
+    return $placeholder;
+
 }
 //
 
 //Cleares the cache
 unset($cache);
 
-//Auto load the all files in the _app directory
-//
-$directory = 'dreamcoil/_app/';
+/**
+ * Preloads the _config.php file
+ * Autoloader for files in the following directorys:
+ * dreamcoil/app/*
+ */
+
+include('dreamcoil/app/_config.php');
+
+$directory = 'dreamcoil/app/';
 
 $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
 
@@ -193,7 +262,12 @@ while($it->valid()) {
 
     if (!$it->isDot()) {
 
-    	include($directory.str_replace("\\", "/", $it->getSubPathName()));
+        if($it->getSubPathName() != '_config.php'){
+
+            include($directory.str_replace("\\", "/", $it->getSubPathName()));
+
+        }
+
     }
 
     $it->next();
