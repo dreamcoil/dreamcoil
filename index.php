@@ -10,9 +10,7 @@
 //Get the requested URI
 //ROUTE and $varRoute
 //
-$route = str_replace(str_replace('index.php', '', $_SERVER['SCRIPT_NAME']), '', $_SERVER['REQUEST_URI']);
-
-$route = '/'.$route;
+$route = str_replace(str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']), '', $_SERVER['REQUEST_URI']);
 
 define('ROUTE',$route);
 
@@ -195,7 +193,7 @@ function htmlEscape($var)
         foreach ($var as $key => $value)
         {
 
-            $var[$key] = htmlspecialchars($value, ENT_QUOTES);
+            $var[$key] = str_replace("'","&prime;",htmlspecialchars($value, ENT_QUOTES));
 
         }
 
@@ -203,7 +201,7 @@ function htmlEscape($var)
     else
     {
 
-        $var = htmlspecialchars($var, ENT_QUOTES);
+        $var = str_replace("'","&prime;",htmlspecialchars($var, ENT_QUOTES));
 
     }
 
