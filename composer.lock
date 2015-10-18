@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "a81424cc0c0f32b7b3d124c6812fad24",
+    "content-hash": "11ac9d79fe2bc077dc8a6d79197d2246",
+    "packages": [
+        {
+            "name": "xolf/dc-routing",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xolf/dc-routing.git",
+                "reference": "8e0a10f9e3ff22491d180a44672611d9a612f56d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xolf/dc-routing/zipball/8e0a10f9e3ff22491d180a44672611d9a612f56d",
+                "reference": "8e0a10f9e3ff22491d180a44672611d9a612f56d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Routing for Dreamcoil Framework",
+            "time": "2015-10-18 15:03:46"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "xolf/dc-routing": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.0"
+    },
+    "platform-dev": []
+}

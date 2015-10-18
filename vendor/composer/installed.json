@@ -1,0 +1,26 @@
+[
+    {
+        "name": "xolf/dc-routing",
+        "version": "1.0.x-dev",
+        "version_normalized": "1.0.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xolf/dc-routing.git",
+            "reference": "8e0a10f9e3ff22491d180a44672611d9a612f56d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xolf/dc-routing/zipball/8e0a10f9e3ff22491d180a44672611d9a612f56d",
+            "reference": "8e0a10f9e3ff22491d180a44672611d9a612f56d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "time": "2015-10-18 15:03:46",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "Routing for Dreamcoil Framework"
+    }
+]

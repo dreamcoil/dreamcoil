@@ -10,7 +10,8 @@
     },
     "license": "MIT",
     "require": {
-        "php": ">=5.0"
+        "php": ">=5.0",
+        "xolf/dc-routing": "1.0.*-dev"
     },
     "authors": [
         {
