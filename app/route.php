@@ -2,4 +2,4 @@
 
 $route = new Dreamcoil\Route;
 
-if($route->is('/profile/{id}/{name}')) var_dump($route->data);
+if($route->is('/profile/{id}/{name}')) echo 'Hey, ' . $route->data['name'];

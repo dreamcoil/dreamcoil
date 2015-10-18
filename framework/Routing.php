@@ -8,6 +8,8 @@ class Route
     public $data;
 
     /**
+     * Returns the current URL
+     *
      * @return string
      */
     public function get()
@@ -17,6 +19,11 @@ class Route
 
     }
 
+    /**
+     * Returns the URL splitted into parts
+     *
+     * @return array
+     */
     public function getArgs()
     {
 
@@ -25,6 +32,8 @@ class Route
     }
 
     /**
+     * Sends to user to a new location
+     *
      * @param $to
      */
     public function set($to)
@@ -35,6 +44,8 @@ class Route
     }
 
     /**
+     * Checks, if a specified route is currently requested
+     *
      * @param $route
      * @return bool
      */
