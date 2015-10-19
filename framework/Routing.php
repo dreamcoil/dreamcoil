@@ -6,6 +6,7 @@ class Route
 {
 
     public $data;
+    private $group;
 
     /**
      * Returns the current URL
@@ -52,6 +53,8 @@ class Route
     public function is($route)
     {
 
+        if(isset($this->group)) $route = '/' . $this->group . '/' . $route;
+
         if(preg_match_all("/{?[a-zA-Z0-9_]{1,}}/", $route, $variables))
         {
 
@@ -67,7 +70,9 @@ class Route
 
                     if($var == $this->getArgs()[$i])
                     {
+
                         $return = false;
+
                     }
                     else
                     {
@@ -87,6 +92,7 @@ class Route
 
                 if(!$return)
                     return false;
+
                 elseif($return)
                 {
 
@@ -103,6 +109,28 @@ class Route
         }
 
         if($this->get() == $route) return true;
+
+        return false;
+
+    }
+
+    /**
+     * Enable group routing
+     *
+     * @param $group
+     * @return bool
+     */
+    public function group($group)
+    {
+
+        if($this->getArgs()[1] == $group)
+        {
+
+            $this->group = $group;
+
+            return true;
+
+        }
 
         return false;
 
