@@ -8,6 +8,8 @@ if($route->is('/hello')) $view->get('welcome.hello');
 
 if($route->is('/profile/{id}/{name}')) echo 'Hey, ' . $route->data['name'];
 
+if($route->is('/test')) App\ExampleClass::called();
+
 if($route->group('profile'))
 {
 
