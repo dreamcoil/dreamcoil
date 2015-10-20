@@ -1,5 +1,7 @@
 <?php
 
+//FILLED WITH EXAMPLE DATA
+
 $route = new Dreamcoil\Route;
 
 $view = new Dreamcoil\View;

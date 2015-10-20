@@ -100,15 +100,28 @@ class View
     }
 
     /**
-     * Includes a view
+     * Returns a view
      *
      * @param $view
      */
     public function get($view)
     {
 
+        return $this->getFile($this->getPath($view));
+
+    }
+
+    /**
+     * Returns a view
+     *
+     * @param $view
+     */
+    public function inc($view, $data = array())
+    {
+
         require $this->getFile($this->getPath($view));
 
     }
+
 
 }

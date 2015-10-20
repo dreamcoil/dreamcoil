@@ -14,11 +14,22 @@ while($it->valid()) {
 
     if (!$it->isDot()) {
 
-        if($it->getSubPathName() != '_config.php'){
-
             require __DIR__.'/../app/Classes/'.str_replace("\\", "/", $it->getSubPathName());
 
-        }
+    }
+
+    $it->next();
+}
+
+$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__.'/../app/Models/'));
+
+$it->rewind();
+
+while($it->valid()) {
+
+    if (!$it->isDot()) {
+
+        require __DIR__.'/../app/Models/'.str_replace("\\", "/", $it->getSubPathName());
 
     }
 
