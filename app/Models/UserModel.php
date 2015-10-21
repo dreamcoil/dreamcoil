@@ -10,7 +10,7 @@ class UserModel
     public function getData()
     {
 
-        var_dump(array('name' => 'FLo', 'age' => 15));
+         return array('name' => 'FLo', 'age' => 15);
 
     }
 
