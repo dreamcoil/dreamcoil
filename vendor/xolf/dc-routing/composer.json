@@ -1,7 +1,0 @@
-{
-    "name": "xolf/dc-routing",
-    "description": "Routing for Dreamcoil Framework",
-    "require": {
-        "php": ">=5.0.0"
-    }
-}
