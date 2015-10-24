@@ -274,5 +274,7 @@ while($it->valid()) {
 }
 //
 
+DEFINE('FRAMEWORK', 0);
+
 //Let's get into the views directory!
 include('dreamcoil/views/route.php');

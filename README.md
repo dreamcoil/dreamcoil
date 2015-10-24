@@ -28,6 +28,14 @@ if($route->is('/post/{hash}')) App\PostController::view($route->data['hash']);
 
 ```
 
+## Example Layouting
+
+```php
+
+$layout = new \Dreamcoil\Layout('Bruce',array('user' => \Model\User::get()));
+
+```
+
 ## Wiki
 
 Do you have some problems with Dreamcoil? 
