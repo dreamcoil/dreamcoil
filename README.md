@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xolf/dreamcoil.svg?branch=1.2)](https://travis-ci.org/xolf/dreamcoil)
+
 # Dreamcoil
 ### PhP framework for smooth people
 ## Quickstart
