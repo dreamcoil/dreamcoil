@@ -25,7 +25,7 @@ class ExampleClass
 
         \Models\UserModel::getData();
 
-        \Dreamcoil\Auth();
+        \Dreamcoil\Auth::set();
 
     }
 
