@@ -10,9 +10,7 @@
     },
     "license": "MIT",
     "require": {
-        "xolf/dreamcoil-framework": "0.0.0.1",
-        "php": ">=5.0",
-        "aws/aws-sdk-php": "^3.8"
+        "xolf/dreamcoil-framework": "0.0.0.1"
     },
     "authors": [
         {
