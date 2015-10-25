@@ -11,9 +11,11 @@ class ExampleClass
     public function called()
     {
 
-        $config = new \Dreamcoil\Config();
+        $config = new \Dreamcoil\Config;
 
         $title = new \Dreamcoil\Codebowl\Title;
+
+        $auth = new \Dreamcoil\Auth;
 
         $title->set($config->get('title'));
 
@@ -25,7 +27,9 @@ class ExampleClass
 
         \Models\UserModel::getData();
 
-        \Dreamcoil\Auth::set();
+        $auth->set();
+
+        if($auth->check()) echo '<br>Welcome!</br>';
 
     }
 
