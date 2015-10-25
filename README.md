@@ -40,3 +40,8 @@ $layout = new \Dreamcoil\Layout('Bruce',array('user' => \Model\User::get()));
 
 Do you have some problems with Dreamcoil? 
 Then I suggest you to have a look at our [wiki](https://github.com/xolf/dreamcoil/wiki)
+
+
+## Update the Framework
+
+If a new framework version has been release,d run `git submodule foreach git pull origin master` for getting all updates.
