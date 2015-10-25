@@ -21,7 +21,7 @@ class ExampleClass
 
         $layout = new \Dreamcoil\Layout('Bubo',array('title' => $title->get(), 'time' => time()));
 
-        echo "We're going to miss you Dreamcoil v1";
+        echo "We're going to miss you Dreamcoil v1<hr>";
 
         \Models\UserModel::getData();
 
