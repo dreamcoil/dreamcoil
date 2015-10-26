@@ -27,7 +27,7 @@ class ExampleClass
 
         \Models\UserModel::getData();
 
-        $auth->set();
+        $auth->set(array('Name' => 'Florian'));
 
         if($auth->check()) echo '<br>Welcome!</br>';
 

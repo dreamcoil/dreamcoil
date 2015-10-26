@@ -276,9 +276,5 @@ while($it->valid()) {
 
 DEFINE('FRAMEWORK', 0);
 
-session_name('sessid');
-
-session_start();
-
 //Let's get into the views directory!
 include('dreamcoil/views/route.php');
