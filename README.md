@@ -6,8 +6,9 @@
 
 1.  [Get it!](https://github.com/xolf/dreamcoil/archive/master.zip)
 2.  Unzip the files in a directory
-3.  Run `composer update` to install all required packages 
-4.  Start using Dreamcoil for your projects
+3.  Collect all framework files with `git submodules init` and `git submodule update`
+4.  Run `composer update` to install all required packages 
+5.  Start using Dreamcoil for your projects
 
 ## Example Routing
 
