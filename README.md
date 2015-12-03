@@ -1,3 +1,5 @@
+# :sparkles: Version 1.2 :sparkles:
+---
 # Dreamcoil
 ### PhP framework for smooth people
 ## Quickstart
