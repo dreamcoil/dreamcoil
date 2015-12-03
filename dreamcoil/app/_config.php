@@ -1,3 +1,0 @@
-<?php
-
-DEFINE('SET_CONFIG', TRUE);
