@@ -1,7 +1,5 @@
 <?php
 
-
-
 $request_uri = $_SERVER['REQUEST_URI'];
 
 $php_self = $_SERVER['SCRIPT_NAME'];
@@ -12,7 +10,9 @@ $route = $request_uri;
 
 if($php_dir != '/') $route = str_replace($php_dir, '', $route);
 
-if($route{0} != '/') $route = '/' . $route;
+if($route != '') if($route{0} != '/') $route = '/' . $route;
+
+if($route == '') $route = '/';
 
 define('ROUTE', $route);
 
