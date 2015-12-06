@@ -1,3 +1,3 @@
 [submodule "framework"]
 	path = framework
-	url = http://github.com/xolf/dreamcoil-framework.git
+	url = https://github.com/dreamcoil/framework.git
