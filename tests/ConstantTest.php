@@ -16,4 +16,9 @@ class ConstantTest extends PHPUnit_Framework_TestCase
         
         $this->assertEquals(ONE_YEAR, 30585600);
     }
+    
+    public function testVersion()
+    {
+        $this->assertTrue(isset(DREAMCOIL_VERSION));
+    }
 }
