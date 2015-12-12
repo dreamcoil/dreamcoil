@@ -19,6 +19,6 @@ class ConstantTest extends PHPUnit_Framework_TestCase
     
     public function testVersion()
     {
-        $this->assertTrue(isset(DREAMCOIL_VERSION));
+        $this->assertTrue(DREAMCOIL_VERSION !== null);
     }
 }
