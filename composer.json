@@ -10,7 +10,7 @@
     },
     "license": "MIT",
     "require": {
-
+        "dreamcoil/packagist": "*"
     },
     "authors": [
         {
