@@ -6,6 +6,7 @@ class ConstantTest extends PHPUnit_Framework_TestCase
 	public function __construct()
 	{
 	
+		//Loads the bootstrap file
 		require __DIR__ . "/../bootstrap/autoload.php";
 	
 	}
