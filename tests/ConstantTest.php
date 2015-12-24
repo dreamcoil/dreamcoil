@@ -6,8 +6,6 @@ class ConstantTest extends PHPUnit_Framework_TestCase
 	public function __construct()
 	{
 	
-		define('ROUTE', '/unit/test/constant');
-	
 		require __DIR__ . "/../bootstrap/autoload.php";
 	
 	}
