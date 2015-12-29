@@ -13,4 +13,4 @@ install:
   - 'composer install'
   - 'composer update'
   
-script: 'phpunit tests  --bootstrap "./bootstrap/autoload.php"'  
+script: 'phpunit --bootstrap "./bootstrap/autoload.php" tests/*'  
