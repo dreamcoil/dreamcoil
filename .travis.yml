@@ -8,7 +8,7 @@ php:
   - nightly
   
 install:
-  - 'ls frameworker'
+  - 'ls framework'
   - 'git submodule update'
   - 'composer install'
   - 'composer update'
