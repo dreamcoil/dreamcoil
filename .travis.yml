@@ -8,7 +8,7 @@ php:
   - nightly
   
 install:
-  - 'git submodule init'
+  - 'ls'
   - 'git submodule update'
   - 'composer install'
   - 'composer update'
