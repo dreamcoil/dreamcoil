@@ -1,5 +1,5 @@
-# Here it is: :sparkles: Version 1.2 :sparkles:
----
+
+[![Build Status](https://travis-ci.org/dreamcoil/dreamcoil.svg?branch=master)](https://travis-ci.org/dreamcoil/dreamcoil)
 # Dreamcoil
 ### PhP framework for smooth people
 ## Quickstart
