@@ -10,7 +10,8 @@
     },
     "license": "MIT",
     "require": {
-
+        "dreamcoil/packagist": "dev-master",
+        "phpunit/phpunit": "*"
     },
     "authors": [
         {
