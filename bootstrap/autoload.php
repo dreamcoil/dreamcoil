@@ -40,7 +40,7 @@ while($it->valid()) {
     $it->next();
 }
 
-if($console !== false) $console = true;
+if(!isset($console)) $console = true;
 
 if($console) return;
 
