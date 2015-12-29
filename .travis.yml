@@ -9,8 +9,7 @@ php:
   
 install:
   - 'git submodule update'
-  - 'ls framework'
   - 'composer install'
   - 'composer update'
   
-script: 'phpunit --bootstrap "./bootstrap/autoload.php" tests/*'  
+script: 'phpunit --bootstrap "./bootstrap/autoload.php" tests'  
