@@ -8,9 +8,6 @@ class ConstantTest extends PHPUnit_Framework_TestCase
 		
 		error_reporting(E_ALL ^ E_NOTICE);
 	
-		//Loads the bootstrap file
-		require __DIR__ . "/../bootstrap/autoload.php";
-	
 	}
     
     public function testTime()
