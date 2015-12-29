@@ -2,6 +2,10 @@
 
 define('DREAMCOIL_BOOTSTRAP', microtime(true));
 
+if(!isset($_SERVER['REQUEST_URI'])) $_SERVER['REQUEST_URI'] = '';
+
+if(!isset($_SERVER['SERVER_NAME'])) $_SERVER['SERVER_NAME'] = 'localhost';
+
 require __DIR__ . '/../framework/autoload.php';
 
 require __DIR__.'/../vendor/autoload.php';
@@ -35,5 +39,9 @@ while($it->valid()) {
 
     $it->next();
 }
+
+if($console !== false) $console = true;
+
+if($console) return;
 
 require __DIR__.'/../app/route.php';
