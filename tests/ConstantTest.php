@@ -12,10 +12,7 @@ class ConstantTest extends PHPUnit_Framework_TestCase
     
     public function testTime()
     {
-	
-		//Loads the bootstrap file
-		require __DIR__ . "/../bootstrap/autoload.php";
-		
+    	
         $this->assertEquals('ONE_SECOND', 1);
         
         $this->assertEquals('ONE_MINUTE', 60);
