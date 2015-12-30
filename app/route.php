@@ -6,7 +6,7 @@ $route = new Dreamcoil\Route;
 
 $view = new Dreamcoil\View;
 
-if($route->is('/hello')) $view->get('welcome.hello');
+if($route->is('/hello')) $view->inc('welcome.hello');
 
 if($route->is('/profile/{id}/{name}')) echo 'Hey, ' . $route->data['name'];
 
