@@ -20,4 +20,6 @@ define('PHP_DIR', $php_dir);
 
 unset($route, $php_dir, $php_self);
 
+$console = false;
+
 require __DIR__ . '/../bootstrap/autoload.php';
