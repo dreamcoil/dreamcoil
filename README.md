@@ -1,6 +1,5 @@
 
 [![Build Status](https://travis-ci.org/dreamcoil/dreamcoil.svg?branch=master)](https://travis-ci.org/dreamcoil/dreamcoil)
-![Latest Stable Version](https://poser.pugx.org/dreamcoil/packagist/version.png)
 ![Download count](https://poser.pugx.org/dreamcoil/packagist/d/total.png)
 # Dreamcoil
 ### PhP framework for smooth people
