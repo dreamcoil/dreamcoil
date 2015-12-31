@@ -33,7 +33,7 @@ if($route->is('/post/{hash}')) App\PostController::view($route->data['hash']);
 
 ```php
 
-$layout = new \Dreamcoil\Layout('Bruce',array('user' => \Model\User::get()));
+$layout = new \Dreamcoil\Layout('Bruce',['user' => \Model\User::get()]);
 
 ```
 
