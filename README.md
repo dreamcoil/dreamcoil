@@ -1,6 +1,7 @@
 
 [![Build Status](https://travis-ci.org/dreamcoil/dreamcoil.svg?branch=master)](https://travis-ci.org/dreamcoil/dreamcoil)
 ![Download count](https://poser.pugx.org/dreamcoil/packagist/d/total.png)
+![License](https://poser.pugx.org/dreamcoil/packagist/license)]
 # Dreamcoil
 ### PhP framework for smooth people
 ## Quickstart
