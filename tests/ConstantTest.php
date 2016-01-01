@@ -37,7 +37,7 @@ class ConstantTest extends PHPUnit_Framework_TestCase
     	
     	$this->assertEquals($this->getter->constant('LOG_WARN_TEXT'), '[Warn]');
     	
-    	$this->assertEquals($this->getter->constant('LOG_ERRORR_TEXT'), '[ERROR]');
+    	$this->assertEquals($this->getter->constant('LOG_ERROR_TEXT'), '[ERROR]');
     	
     }
     
