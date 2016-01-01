@@ -2,7 +2,7 @@
 
 use Dreamcoil\Config;
 
-class ConstantTest extends PHPUnit_Framework_TestCase
+class ConfigTest extends PHPUnit_Framework_TestCase
 {
     
     public $config;
