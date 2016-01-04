@@ -14,13 +14,6 @@ class TranslateTest extends PHPUnit_Framework_TestCase
 	
 	}
 	
-	public function testSetter()
-	{
-		
-		$this->assertTrue($this->translate->setLang('de'));
-		
-	}
-	
 	public function testValues()
 	{
 	    
