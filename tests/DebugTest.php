@@ -8,7 +8,7 @@ class DebugTest extends PHPUnit_Framework_TestCase
 
 	private $debugger, $getter;
 	
-	public funtion __construct()
+	public function __construct()
 	{
 	
 		$this->debugger = new Debug();
