@@ -4,7 +4,6 @@ use Dreamcoil\Getter;
 
 class DebugTest extends PHPUnit_Framework_TestCase
 {
-
 	private $getter;
 	
 	public function __construct()
