@@ -4,19 +4,21 @@ use Dreamcoil\Getter;
 
 class DebugTest extends PHPUnit_Framework_TestCase
 {
-	private $getter;
+	private $getter, $debug;
 	
 	public function __construct()
 	{
 		
 		$this->getter = new Getter();
+		
+		$this->debug = new \Dreamcoil\Debug();
 	
 	}
 	
 	public function testAdd()
 	{
 	
-		\Dreamcoil\Debug::add('Hello this is phpunit test', $this->getter->constant('LOG_INFO_TEXT'));
+		$this->debug->add('Hello this is phpunit test', $this->getter->constant('LOG_INFO_TEXT'));
 	
 	}
 
