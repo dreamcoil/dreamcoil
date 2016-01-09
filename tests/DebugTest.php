@@ -1,17 +1,14 @@
 <?php
 
-use Dreamcoil\Debug;
 use Dreamcoil\Getter;
 
 class DebugTest extends PHPUnit_Framework_TestCase
 {
 
-	private $debugger, $getter;
+	private $getter;
 	
 	public function __construct()
 	{
-	
-		$this->debugger = new Debug();
 		
 		$this->getter = new Getter();
 	
@@ -20,7 +17,7 @@ class DebugTest extends PHPUnit_Framework_TestCase
 	public function testAdd()
 	{
 	
-		$this->debugger->add('Hello this is phpunit test', $this->getter->constant('LOG_INFO_TEXT'));
+		\Dreamcoil\Debug::add('Hello this is phpunit test', $this->getter->constant('LOG_INFO_TEXT'));
 	
 	}
 
