@@ -4,6 +4,8 @@
 
 namespace App;
 
+use \Dreamcoil;
+
 class ExampleClass
 {
 
@@ -11,7 +13,7 @@ class ExampleClass
     public function called()
     {
 
-        $config = new \Dreamcoil\Config;
+        $config = new Config;
 
         $title = new \Dreamcoil\Codebowl\Title;
 
