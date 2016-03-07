@@ -6,6 +6,9 @@ if(!isset($_SERVER['REQUEST_URI'])) $_SERVER['REQUEST_URI'] = '';
 
 if(!isset($_SERVER['SERVER_NAME'])) $_SERVER['SERVER_NAME'] = 'localhost';
 
+
+if(!file_exists(__DIR__ . '/../framework/autoload.php')) die("The framework must be loaded<br><a href='https://github.com/dreamcoil/dreamcoil#quickstart'>See Quickstart</a>");
+
 require __DIR__ . '/../framework/autoload.php';
 
 require __DIR__.'/../vendor/autoload.php';
