@@ -30,6 +30,17 @@ class ConstantTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($this->getter->constant('ONE_YEAR'), 30585600);
     }
     
+    public function testLogMeta()
+    {
+    	
+    	$this->assertEquals($this->getter->constant('LOG_INFO_TEXT'), '[info]');
+    	
+    	$this->assertEquals($this->getter->constant('LOG_WARN_TEXT'), '[Warn]');
+    	
+    	$this->assertEquals($this->getter->constant('LOG_ERROR_TEXT'), '[ERROR]');
+    	
+    }
+    
     public function testVersion()
     {
         $this->assertTrue('DREAMCOIL_VERSION' !== null);
