@@ -12,15 +12,11 @@ class ExampleClass
 
     public static function called()
     {
-
         $config = new Config;
-
         $title = new \Dreamcoil\Codebowl\Title;
-
         $auth = new \Dreamcoil\Auth;
 
         $title->set($config->get('title'));
-
         $title->append('Home');
 
         $layout = new \Dreamcoil\Layout('Bubo',array('title' => $title->get(), 'time' => time()));
@@ -30,9 +26,7 @@ class ExampleClass
         \Models\UserModel::getData();
 
         $auth->set(array('Name' => 'Florian'));
-
         if($auth->check()) echo '<br>Welcome!</br>';
-
     }
 
 }
