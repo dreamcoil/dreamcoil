@@ -10,7 +10,7 @@ class ExampleClass
 {
 
 
-    public function called()
+    public static function called()
     {
 
         $config = new Config;
