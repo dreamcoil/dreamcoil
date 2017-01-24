@@ -17,7 +17,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
 	public function testValues()
 	{
 	    
-	    $this->assertEquals($this->translate->get('footer'), 'footer');
+	    $this->assertEquals($this->translate->get('fail.footer'), 'fail.footer');
 	    $this->assertEquals($this->translate->get('general.footer'), 'Programmiert von xolf');
 	    
 	}
